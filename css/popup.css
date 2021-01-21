@@ -1,0 +1,343 @@
+body {
+  background-color: #ededed;
+  width: 700px;
+  height: 100.1%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7em;
+}
+
+#wrapper {
+  width: 100%;
+  padding: 0 0 40px 0;
+}
+
+#labelChooserBanner {
+  position: relative;
+  display: none;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #8f392b;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+#labelChooserBanner > .labelChooserText {
+  margin-right: 20px;
+  padding: 3px 5px;
+}
+
+#labelChooserBanner > .labelChooserText > span {
+  font-weight: bold;
+}
+
+#labelChooserBanner > .labelChooserText > a {
+  color: #fff;
+}
+
+#labelChooserBanner > .labelChooserClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #ededed;
+}
+
+#newCookie,
+#pasteCookie {
+  display: none;
+}
+
+#newCookieFromString {
+  display: none;
+  visibility: hidden;
+}
+
+#cookieFilter {
+  display: none;
+}
+
+.filteredBy {
+  color: red;
+  font-weight: bold;
+  max-width: 250px;
+  overflow: hidden;
+}
+.input {
+  width: 99%;
+  padding: 2px;
+  border-radius: 2px;
+  border: 0.3px solid rgb(224 206 206);
+}
+
+.checkbox {
+  vertical-align: middle;
+}
+
+.searchCondition {
+  width: 100%;
+  padding: 5px;
+  margin: 0px 0 0px 0;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+#searchBox {
+  float: right;
+  z-index: 1000;
+}
+
+#searchField {
+  display: none;
+  position: fixed;
+  top: 1px;
+  margin-left: -101px;
+  width: 100px;
+  z-index: 1000;
+}
+
+#submitFiltersDiv {
+  float: right;
+  height: 30px;
+  right: 15px;
+  top: 10px;
+}
+
+#submitFiltersButton {
+  display: none;
+}
+
+#submitDiv {
+  margin-top: 10px;
+  display: none;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  background-color: #ededed;
+}
+
+.toast {
+  display: none;
+  position: fixed;
+  z-index: 4000;
+  background-color: #4d4d4d;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 7px;
+  width: auto;
+  top: 10%;
+  left: 50%;
+}
+
+.submitDivSepWindow {
+  position: relative !important;
+  bottom: 0 !important;
+}
+
+#helpButton {
+  position: absolute;
+  width: 50px;
+  margin: 10px 0 0 -55px;
+  right: 10px;
+  text-align: right;
+  color: #000;
+}
+
+#helpButton:hover {
+  color: #3b3b3b;
+}
+
+#submitButton {
+  font-size: 15px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  color: #008000;
+}
+
+#submitButton:hover {
+  color: #009300;
+}
+
+.clearDiv {
+  cursor: pointer;
+  float: right;
+  margin-right: 3px;
+  margin-top: -10px;
+}
+
+.searchResult {
+  background: none !important;
+  background-color: #4dffa3 !important;
+}
+
+.highlight {
+  color: black;
+  font-weight: bold;
+}
+
+#alert_wrapper {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.helper {
+  visibility: hidden;
+  margin-left: -9px;
+  color: #b10000 !important;
+  cursor: help;
+  font-weight: bold;
+}
+
+#cookieFilter .cookie-row > div {
+  width: 150px !important;
+}
+
+.cmdText {
+  height: 16px;
+}
+
+.value {
+  resize: vertical;
+}
+
+.cookie_details_template {
+  display: none;
+}
+
+.cookie-table {
+  display: table;
+  z-index: 10;
+  margin-left: 35px;
+  width: 92%;
+}
+
+.cookie-table > * {
+  display: table-row;
+}
+
+.cookie-table > label {
+  font-size: 1em;
+  color: #383838;
+}
+
+.cookie-row {
+  display: table;
+  margin-left: 35px;
+  width: 92%;
+}
+
+.cookie-row > * {
+  display: table-cell;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+#buttons {
+  margin-right: 20px;
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 4px 18px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  font: inherit;
+}
+
+button:hover {
+  color: #555 !important;
+}
+
+button:focus {
+  outline: none;
+}
+
+.vertical-commands-row {
+  float: left;
+  display: table;
+  vertical-align: middle;
+  width: 30px;
+  padding: 0;
+}
+.vertical-commands-row:hover {
+  content: attr(title);
+}
+
+.vertical-commands-row > * {
+  height: 2.3em;
+  width: 30px;
+  display: table-row;
+  text-align: left;
+  cursor: pointer;
+}
+
+.vertical-commands-row > a:hover {
+  opacity: 0.8;
+}
+
+.vertical-commands-row > * > * {
+  padding: 5px;
+  width: 30px;
+  font-size: 1.8em;
+}
+
+.fa:not(.fa-spin) {
+  padding-right: 1px;
+  padding-left: 5px;
+  width: 14px;
+  height: 18px;
+}
+
+.error {
+  width: 100%;
+  color: red;
+  font-size: 1.1em;
+  text-align: left !important;
+}
+
+#noCookies {
+  display: none;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.error {
+  color: #ff0000 !important;
+  font-weight: bold;
+}

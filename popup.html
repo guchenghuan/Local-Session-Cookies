@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>-</title>
+    <!-- cookies -->
+    <link rel="stylesheet" type="text/css" href="/css/smoothness/jquery-ui-1.12.1.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/uniform/uniform.default.css" />
+    <link rel="stylesheet" type="text/css" href="/css/opensans/opensans.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/popup.css">
+    <link rel="stylesheet" type="text/css" href="/css/popup-accordion.css">
+    <script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery-ui-1.12.1.custom.min.js"></script>
+    <script type="text/javascript" src="/lib/uniform/jquery.uniform.js"></script>
+    <!-- <script type="text/javascript" src="/lib/custom_i18n.js"></script> -->
+    <!-- <script type="text/javascript" src="/lib/i18n_translator.js"></script> -->
+    <script type="text/javascript" src="/lib/object-watch.js"></script>
+    <script type="text/javascript" src="/js/cookie_helpers.js"></script>
+    <script type="text/javascript" src="/js/utils.js"></script>
+    <script type="text/javascript" src="/js/data.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="/js/ga.js" async></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="type" title="切换tab"></div>
+    <div id="main">
+        <form action="#" spellcheck="false">
+            <div id="buttons">
+                <button type="button" id="add" style="
+                    color: rgb(255 255 255);
+                    background-color: rgb(103 194 58);
+                    border-color: rgb(103 194 58);
+            ">新增</button>
+                <button type="button" id="download" style="
+                color: rgb(255 255 255);
+                background-color: rgb(144 147 153);
+                border-color: rgb(144 147 153);
+            ">下载</button>
+                <button type="button" id="copy" style="
+                color: rgb(255 255 255);
+                background-color: rgb(230 162 60);
+                border-color: rgb(230 162 60);
+            ">复制</button>
+                <button type="button" id="clear" style="
+                color: rgb(255 255 255);
+                background-color: rgb(245 108 108);
+                border-color: rgb(245 108 108);
+            ">清空 (谨慎操作)</button>
+            </div>
+
+            <div class="clear"></div>
+
+            <div id="table">
+                <p>加载中...</p>
+            </div>
+        </form>
+    </div>
+    <div class="unselectable" id="test">
+        <div id="wrapper">
+            <div id="searchBox" class="ui-corner-all">
+                <input type="text" id="searchField" value="" />
+            </div>
+
+            <div class="btns">
+                <div id="buttons">
+                    <button type="button" id="deleteAllButton" title="清空全部数据" style="
+                        color: rgb(255 255 255);
+                        background-color: rgb(245 108 108);
+                        border-color: rgb(245 108 108);
+                        margin-right: 10px;
+                        ">清空 (谨慎操作)</button>
+                    <button type="button" id="copyButton" title="复制当前所有数据" style="
+                        color: rgb(255 255 255);
+                        background-color: rgb(230 162 60);
+                        border-color: rgb(230 162 60);
+                        ">复制</button>
+                </div>
+            </div>
+
+            <div id="cookieSearchCondition">
+                <input class="searchCondition" type="text" i18n_placeholder="URL" placeholder="">
+            </div>
+
+            <div id="noCookies" i18n="no_cookies">
+            </div>
+
+            <div id="cookiesList">
+            </div>
+
+            <div class="cookie cookie_details_template">
+                <div class="vertical-commands-row" title="删除当前cookie信息">
+                    <a class="deleteOne" i18n_title="Alert_deleteCookie">
+                        <i class="fa fa-trash-o" style="color:#363636;"></i>
+                    </a>
+                </div>
+                <input type="hidden" class="index" value="" disabled="disabled">
+                <input type="hidden" class="name" value="" disabled="disabled">
+                <div class="cookie-table">
+                    <div>
+                        <textarea rows="5" class="value input" type="textarea" spellcheck="false"></textarea>
+                    </div>
+                    <input class="domain input" type="text">
+                    <input class="path input" type="text">
+                    <input class="expiration input" type="text">
+                </div>
+            </div>
+            <div id="copiedToast" class="toast i18n-replaced" i18n="Copied_clipboard" style="">Cookie 已复制</div>
+
+            <div id="submitDiv">
+                <button type="button" id="submitButton" style="
+                        color: rgb(255 255 255);
+                        background-color: rgb(103 194 58);
+                        border-color: rgb(103 194 58);
+                ">立即更新</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading"></div>
+    <!-- <script src="jquery.js"></script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{
+   "browser_action": {
+      "default_icon": "img/128x128.png",
+      "default_popup": "popup.html"
+   },
+   "description": "对本地缓存，对话缓存，Cookies进行增删改查~",
+   "icons": {
+      "128": "img/128x128.png",
+      "16": "img/16x16.png",
+      "48": "img/48x48.png"
+   },
+   "manifest_version": 2,
+   "name": "Storage & Cookies",
+   "offline_enabled": true,
+   "permissions": [
+      "activeTab",
+      "tabs",
+      "\u003Call_urls>",
+      "cookies",
+      "contextMenus",
+      "notifications",
+      "clipboardWrite",
+      "webRequest",
+      "webRequestBlocking"
+   ],
+   "background": {
+      "scripts": [
+         "/lib/jquery-3.3.1.min.js",
+         "/lib/object-watch.js",
+         "/js/cookie_helpers.js",
+         "/js/utils.js",
+         "/js/data.js",
+         "/js/background.js",
+         "/devtools/background-devtools.js",
+         "/js/ga.js"
+      ]
+   },
+   "version": "2.4"
+}
